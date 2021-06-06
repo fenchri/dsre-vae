@@ -1,0 +1,51 @@
+log_interval: 100
+device: 0
+seed: 2021
+
+# DATA
+relations_file: ../data/LANG/nyt10/nyt10_rel2id.json
+train_data: ../data/LANG/nyt10_570k/processed/nyt10_570k_train.txt
+val_data: ../data/LANG/nyt10_570k/processed/nyt10_570k_val.txt
+test_data: ../data/LANG/nyt10/processed/nyt10_test.txt
+prior_mus_file: ../data/KB/Freebase_570k/pairs_mu_64d.json
+output_folder: ../saved_models/
+logs: ../logs/
+exp_name: 'nyt10_570k'
+model_name: 'nyt10_570k'
+
+# Hyper-parameters
+batch_size: 128
+epochs: 100
+bag_size: 500
+word_embed_dim: 50
+rel_embed_dim: 64
+pos_embed_dim: 8
+latent_dim: 64
+max_sent_len: 50
+pretrained_embeds_file: ../embeds/glove.6B.50d.txt  # vec.txt (Lin et al., 2016)
+freeze_words: False
+enc_dim: 256
+dec_dim: 256
+enc_layers: 1
+dec_layers: 1
+enc_bidirectional: True
+dec_bidirectional: False
+input_dropout: 0.3
+output_dropout: 0.3
+teacher_force: 0.3
+lr: 0.001
+weight_decay: 0.000001
+clip: 10
+max_vocab_size: 40000
+cutoff_freq:
+lowercase: True
+primary_metric: pr_auc
+patience: 5
+task_weight: 0.9
+
+# FLAGS
+early_stop: True
+reconstruction: True
+include_positions: True
+priors: True
+freeze_pretrained: False

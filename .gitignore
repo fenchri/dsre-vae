@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# additional
+.DS_Store
+nohup.out
+.idea
+ dotenv
+.env
+bin/
+jobscript
+jobscript.e*
+jobscript.o*
+saved_models/
+embeds/
+plots/
+data/KB/Freebase/
+data/KB/Wikidata/
+
+# virtualenv
+.venv
+venv/
+ENV/
+env/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+*.egg-info/
+.installed.cfg
+*.egg

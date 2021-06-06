@@ -1,0 +1,53 @@
+log_interval: 500
+device: 0
+seed: 2021
+
+# DATA
+relations_file: ../data/LANG/wikidistant/wiki_distant_rel2id.json
+train_data: ../data/LANG/wikidistant/processed/wiki_distant_train.txt
+val_data: ../data/LANG/wikidistant/processed/wiki_distant_val.txt
+test_data: ../data/LANG/wikidistant/processed/wiki_distant_test.txt
+prior_mus_file: ../data/KB/Wikidata/pairs_mu_64d.json
+output_folder: ../saved_models/
+logs: ../logs/
+exp_name: 'wikidistant'
+model_name: 'wikidistant'
+
+# Hyper-parameters
+batch_size: 128
+epochs: 100
+bag_size: 500
+word_embed_dim: 50
+rel_embed_dim: 128
+pos_embed_dim: 8
+latent_dim: 64
+max_sent_len: 30
+pretrained_embeds_file: ../embeds/glove.6B.50d.txt
+freeze_words: False
+enc_dim: 256
+dec_dim: 256
+enc_layers: 1
+dec_layers: 1
+enc_bidirectional: True
+dec_bidirectional: False
+input_dropout: 0.3
+output_dropout: 0.1
+teacher_force: 0.3
+lr: 0.001
+weight_decay: 0.000001
+clip: 5
+max_vocab_size: 50000
+cutoff_freq:
+lowercase: True
+primary_metric: pr_auc
+reco_loss: AdaptiveSoftmax
+patience: 5
+task_weight: 0.9
+
+# FLAGS
+early_stop: True
+reconstruction: True
+include_positions: True
+priors: True
+use_pretrain: False
+freeze_pretrained: False
