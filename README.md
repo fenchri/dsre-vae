@@ -79,7 +79,7 @@ python make_data.py --data Wikidata \
 
 ### Training KB embeddings
 In order to train Knowledge Base embeddings, we will use the [DGL-KE](https://github.com/awslabs/dgl-ke) package.
-Follow the instructions on the page for installation.
+The following script will train TransE entity and relation embeddings for Freebase and Wikidata.
 ```bash
 cd data/KB
 sh train_embeds.sh
