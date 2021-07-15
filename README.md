@@ -1,6 +1,6 @@
 # DSRE with Knowledge Base Priors
 
-Source code for "[Distantly Supervised Relation Extraction with Sentence Reconstruction and Knowledge Base Priors]()" in NAACL 2021
+Source code for "[Distantly Supervised Relation Extraction with Sentence Reconstruction and Knowledge Base Priors](https://aclanthology.org/2021.naacl-main.2/)" in NAACL 2021
 
 #### Reference
 If you find this code useful and plan to use it, please cite the following paper =)
